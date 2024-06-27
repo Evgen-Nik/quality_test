@@ -1,0 +1,40 @@
+.banner {
+    padding-top: 40px;
+    position: relative;
+}
+
+.slider {
+    background: var(--dark-violet, rgba(112, 41, 203, 1));
+    padding: 51.75px 100px 66.25px 100px;
+    position: relative;
+    &__window {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__inner {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    &__slide {
+        margin-right: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+    &__arrow {
+        position: absolute;
+        background: none;
+        border: none;
+        &_prev {
+            top: 48px;
+            left: 50.75px;
+        }
+        &_next {
+            top: 48px;
+            right: 50px;
+        }
+    }
+}

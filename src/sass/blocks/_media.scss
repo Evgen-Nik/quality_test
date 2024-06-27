@@ -1,0 +1,291 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .header {
+        padding-left: 56px;
+    }
+    .slider {
+        &__slide {
+            margin-right: 0;
+        }
+    }
+    .blocks {
+        &__title {
+            padding-left: 0;
+        }
+        &__row {
+            &_1 {
+                grid-template-columns: 1fr 2fr;
+            }
+            &_2 {
+                grid-template-columns: 6fr 1fr;
+            }
+        }
+    }
+    .cards {
+        &__title {
+            padding-left: 0;
+        }
+        &__wrapper {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+    .footer {
+        padding-left: 0;
+        &__list {
+            justify-content: center;
+            gap: 150px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title  {
+        font-size: 28px;
+        line-height: 45px;
+        &_fz28 {
+            font-size: 24px;
+        }
+        &_fz45 {
+            font-size: 36px;
+        }
+    }
+    .text {
+        font-size: 16px;
+        &_fz28 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &_fz30 {
+            font-size: 26px;
+            line-height: 30px;
+        }
+        &_fz53 {
+            font-size: 43px;
+            line-height: 52px;
+        }
+    }
+    .btn {
+        padding: 12px 20px;
+        border-radius: 20px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .header {
+        background: var(--violet, rgba(180, 127, 246, 1));
+        padding: 30px 50px;
+        &__burger {
+            width: 36px;
+            span {
+                height: 3px;
+                margin-top: 7px;
+            }
+            &.active {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(10px) rotate(-29deg);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(2px) rotate(29deg);
+                    }
+                }
+            }  
+        }
+    }
+    .slider {
+        padding: 50px 100px;
+        &__arrow {
+            img {
+                width: 70%;
+            }
+        }
+    }
+    .blocks {
+        &__row {
+            grid-template-rows: minmax(150px, auto);
+        }
+    }
+    .cards {
+        &__wrapper {
+            padding: 20px;
+        }
+        &__item {
+            border-radius: 25px;
+        }
+    }
+    .footer {
+        &__list {
+            gap: 120px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .header {
+        padding: 25px 40px;
+        &__list {
+            gap: 40px;
+        }
+        &__menu {
+            width: 75%;
+        }
+    }
+    .slider {
+        padding: 30px 80px;
+        &__slide {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        &__arrow {
+            img {
+                width: 60%;
+            }
+            &_prev {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 30px;
+            }
+            &_next {
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+            }
+        }   
+    }
+    .blocks {
+        &__row {
+            &_2 {
+                grid-template-columns: 6fr 2fr;
+            }
+        }
+    }
+    .cards {
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .footer {
+        &__list {
+            gap: 70px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 5px;
+    }
+    .title  {
+        font-size: 24px;
+        line-height: 30px;
+        &_fz28 {
+            font-size: 20px;
+        }
+        &_fz45 {
+            font-size: 28px;
+        }
+    }
+    .text {
+        font-size: 14px;
+        &_fz28 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &_fz30 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &_fz53 {
+            font-size: 38px;
+            line-height: 52px;
+        }
+    }
+    .btn {
+        padding: 10px 10px;
+        border-radius: 15px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .header {
+        padding: 25px 20px;
+        &__list {
+            column-gap: 40px;
+            row-gap: 20px;
+        }
+        &__burger {
+            width: 30px;
+            span {
+                height: 2px;
+                margin-top: 6px;
+            }
+            &.active {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(8px) rotate(-29deg);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(2px) rotate(29deg);
+                    }
+                }
+            }  
+        }
+        &__menu {
+            padding: 32px;
+            &-btn {
+                margin: 16px 0 0 0;
+            }
+        }
+    }
+    .slider {
+        padding: 30px 40px;
+        &__arrow {
+            img {
+                width: 40%;
+            }
+            &_prev {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 5px;
+            }
+            &_next {
+                top: 50%;
+                transform: translateY(-50%);
+                right: 5px;
+            }
+        }   
+    }
+    .cards {
+        &__wrapper {
+            margin: 40px 10px 0 10px;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 15px;
+        }
+        &__item {
+            border-radius: 20px;
+        }
+    }
+    .footer {
+        &__list {
+            column-gap: 40px;
+            row-gap: 20px;
+        }
+    }
+    .modal {
+        &__dialog {
+            min-width: 80%;
+        }
+        &__content {
+            min-height: 300px;
+        }
+    }
+}

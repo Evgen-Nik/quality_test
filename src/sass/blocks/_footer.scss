@@ -1,0 +1,30 @@
+.footer {
+    margin-top: 40px;
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+    padding-left: 204.5px;
+    background: var(--light-violet, rgba(216, 127, 246, 1));
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 176px;
+    }
+    &__item {
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s;
+        &:hover {
+            color: var(--grey105, rgba(105, 105, 105, 1));
+            text-decoration: none;
+        }
+        &.active {
+            font-weight: 700;
+            text-decoration: underline;
+            &:hover {
+                color: var(--grey105, rgba(105, 105, 105, 1));
+                text-decoration: underline;
+            }
+        }
+    }
+}

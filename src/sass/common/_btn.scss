@@ -1,0 +1,17 @@
+.btn {
+    background: var(--accent, rgba(255, 75, 75, 1));
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.13px;
+    color: var(--white, rgba(255, 255, 255, 1));
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover {
+        box-shadow: 2px 5px 10px var(--dark-green, rgba(73, 121, 87, 1));
+    }
+}
