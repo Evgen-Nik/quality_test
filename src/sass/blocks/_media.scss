@@ -1,3 +1,35 @@
+@media (hover: hover) {
+    a {
+        &:hover {
+            color: var(--grey105, rgba(105, 105, 105, 1));
+            text-decoration: none;
+        }
+        &.active {
+            font-weight: 700;
+            text-decoration: underline;
+            &:hover {
+                color: var(--grey105, rgba(105, 105, 105, 1));
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (hover: none) {
+    a {
+        color: var(--white, rgba(255, 255, 255, 1));
+        &:focus, &:active {
+            color: var(--white, rgba(255, 255, 255, 1));
+            outline: none;
+        }
+        &.active {
+            color: var(--white, rgba(255, 255, 255, 1));
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -14,12 +46,12 @@
         &__title {
             padding-left: 0;
         }
-        &__row {
-            &_1 {
-                grid-template-columns: 1fr 2fr;
+        &__item {
+            &_3 {
+                grid-column: span 23;
             }
-            &_2 {
-                grid-template-columns: 6fr 1fr;
+            &_4 {
+                grid-column: span 6;
             }
         }
     }
@@ -105,8 +137,9 @@
         }
     }
     .blocks {
-        &__row {
-            grid-template-rows: minmax(150px, auto);
+        &__wrapper {
+            grid-template-rows: repeat(2, minmax(150px, auto));
+            grid-auto-rows: minmax(150px, auto);
         }
     }
     .cards {
@@ -160,13 +193,6 @@
                 right: 30px;
             }
         }   
-    }
-    .blocks {
-        &__row {
-            &_2 {
-                grid-template-columns: 6fr 2fr;
-            }
-        }
     }
     .cards {
         &__wrapper {

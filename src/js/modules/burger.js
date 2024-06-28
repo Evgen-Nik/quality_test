@@ -14,6 +14,20 @@ function burger() {
             menu.classList.toggle('active');
         });
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && burger.classList.contains('active') && menu.classList.contains('active')) {
+                burger.classList.remove('active');
+                menu.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !burger.contains(e.target)) {
+                burger.classList.remove('active');
+                menu.classList.remove('active');
+        }
+    });
 }
 
 export default burger;

@@ -8,25 +8,35 @@
     &__wrapper {
         margin-top: 40px;
         background: var(--superlight-violet, rgba(190, 185, 255, 1));
-        display: grid;
-        gap: 13px;
         padding-bottom: 5px;
-    }
-    &__row {
         display: grid;
         gap: 13px;
-        grid-template-rows: minmax(198px, auto);
-        &_1 {
-            grid-template-columns: 392px 765px;
-        }
-        &_2 {
-            grid-template-columns: 995px 162px;
-        }
+        grid-template: repeat(2, minmax(198px, auto)) / repeat(29, 1fr);
+        grid-auto-rows: minmax(198px, auto);
     }
     &__item {
         background: var(--ban-color, rgba(58, 222, 75, 1));
         display: flex;
         justify-content: center;
         align-items: center;
+        &_1 {
+            grid-column: span 10;
+        }
+        &_2 {
+            grid-column: span 19;
+        }
+        &_3 {
+            grid-column: span 25;
+        }
+        &_4 {
+            grid-column: span 4;
+        }
+
+        // Применяем счетчик к блокам и вставляем номер с помощью псевдоэлемента
+        counter-increment: section; // Увеличиваем счетчик на 1
+        position: relative;
+        &:before {
+            content: counter(section);
+        }
     }
 }

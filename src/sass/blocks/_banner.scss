@@ -5,10 +5,12 @@
 
 .slider {
     background: var(--dark-violet, rgba(112, 41, 203, 1));
-    padding: 51.75px 100px 66.25px 100px;
+    padding: 51.75px 100px;
+    min-height: 176px;
     position: relative;
     &__window {
         width: 100%;
+        min-height: 70px;
         overflow: hidden;
         position: relative;
     }

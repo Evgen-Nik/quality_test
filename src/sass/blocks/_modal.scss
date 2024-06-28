@@ -35,11 +35,15 @@
         height: 39px;
         background: var(--card-color, rgba(73, 121, 87, 1));
         border-radius: 5px;
+        border: none;
         padding: 9px 14px;
         font-size: 30px;
         line-height: 20px;
         color: var(--white, rgba(255, 255, 255, 1));
         cursor: pointer;
+        &:hover {
+            box-shadow: 2px 5px 10px var(--dark-green, rgba(73, 121, 87, 1));
+        }
     }
     &__text {
 
